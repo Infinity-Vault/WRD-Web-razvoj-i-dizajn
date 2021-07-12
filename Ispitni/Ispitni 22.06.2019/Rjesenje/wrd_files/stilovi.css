@@ -1,0 +1,136 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+#Wrapper {
+  display: flex;
+}
+#IzbornikDugme {
+  display: none;
+  cursor: pointer;
+}
+
+nav {
+  background-color: blue;
+  color: white;
+  width: 30%;
+}
+nav a {
+  color: white;
+  display: block;
+  text-align: left;
+  margin: 15px;
+  font-size: larger;
+  text-decoration: none;
+  width: 40%;
+  padding: 10px;
+}
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.534);
+}
+h1 {
+  text-align: center;
+  font-size: xxx-large;
+}
+hr {
+  width: 5%;
+  position: relative;
+  right: 45%;
+}
+#odabir {
+  position: relative;
+  left: 2%;
+}
+#wrapper {
+  width: 70%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.Kontejner {
+  display: flex;
+}
+.VilaKolonaWrapper {
+  width: 33%;
+  text-align: center;
+}
+img {
+  width: 95%;
+}
+img:hover {
+  opacity: 70%;
+}
+#forma {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+#dodajKupca {
+  height: 40px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 25px;
+  margin-top: 8px;
+}
+table {
+  margin-top: 5px;
+}
+#footer {
+  position: relative;
+  left: 5%;
+}
+h4 {
+  font-weight: 4000;
+}
+@media only screen and (max-width: 600px) {
+  #Wrapper {
+    flex-direction: column;
+    overflow-y: hidden;
+  }
+  nav {
+    width: 100%;
+  }
+  #IzbornikDugme {
+    display: inline;
+    border: none;
+  }
+  span {
+    font-size: xx-large;
+  }
+  nav a {
+    text-align: center;
+    width: 100%;
+    border-bottom: 0.1px solid white;
+    margin: 0px;
+  }
+  #Izbornik {
+    display: none;
+  }
+
+  #wrapper {
+    width: 100%;
+    margin: 0px;
+  }
+  .Kontejner {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .VilaKolonaWrapper {
+    width: 90%;
+  }
+  img {
+    width: 70%;
+  }
+}
+.error{
+    color: red;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/wrd_files/stilovi.css">
+  <script defer src="/external/jquery/jquery.js"></script>
+  <script defer src="/jquery-validation-1.16.0/dist/jquery.validate.js"></script>
+  <script defer src="/wrd_files/script.js"></script>
+  <title>Ispitni</title>
+</head>
+<body> 
+<div id="Wrapper">
+  <nav>
+    <div style="text-align: left;font-size:30px;margin: 20px;">
+        <a id="IzbornikDugme" onclick="OpenClose()">☰</a><span>BROJ INDEXA</span>
+    </div>
+  
+     <div id="Izbornik" >
+    <a class="IzbornikStavka" href="#">Home</a> 
+    <a class="IzbornikStavka" href="#">AMF 1</a> 
+    <a class="IzbornikStavka" href="#">AMF 2</a> 
+    <a class="IzbornikStavka" href="#">AMF 3</a> 
+    <a class="IzbornikStavka" href="#">AMF 4</a> 
+    <a class="IzbornikStavka" href="#">AMF 5</a>
+  </div>
+  </nav>
+  
+  
+  <div id="wrapper">
+  
+    <div>
+      <h1>Iznajmljivanje nekretnine</h1>
+      <hr />
+    </div>
+    <label id="odabir">Odaberite vilu</label>
+    <div  class="Kontejner">
+          <div class="VilaKolonaWrapper">
+            <img class="VilaKolonaOkvir" src="./wrd_files/team2.jpg" />
+            <h3>Villa Mostar</h3>
+            <h4>100 KM po danu</h4>
+            <p class="VilaOpis">Villa u odlicnom stanju. Na klizistu, nije puno presla. Uskoro u centru Mostara</p>
+          </div>
+         
+          <div class="VilaKolonaWrapper">
+              <img class="VilaKolonaOkvir" src="./wrd_files/team1.jpg"  />
+              <h3>Villa Buna - Blagaj</h3>
+              <h4>120 KM po danu</h4>
+              <p class="VilaOpis">Odlicna za inznajmljivanje turistima i odlicnim studentima.</p>
+          </div>
+  
+          <div class="VilaKolonaWrapper">
+              <img class="VilaKolonaOkvir" src="./wrd_files/team3.jpg"  />
+              <h3>Villa Vlašić</h3>
+              <h4>130 KM po danu</h4>
+              <p class="VilaOpis">Buduće kancelarije FIT-a. Iskreno se nadamo.</p>
+          </div>
+        </div>
+   <div  class="Kontejner">
+    </div>
+    <div id="forma">
+      <form id="formaID">
+          <label for="dostavaIme">Ime</label>
+          <input id="dostavaIme" name="ime" placeholder="kupac ime"/>
+  
+          <label for="dostavaAdresa">Adresa</label>
+          <input id="dostavaAdresa" name="adresa" placeholder="kupac adresa"/>
+  
+          <label for="dostavaPostanskiBroj">Poštanski broj</label>
+          <input id="dostavaPostanskiBroj" name="pbroj" value=""/>
+  
+          <label for="dostavaTelefon">Telefon</label>
+          <input id="dostavaTelefon" name="telefon" placeholder="+387-61-888-8888"/>
+  
+          <label for="napomena">Napomena</label>
+          <textarea id="napomena" style="width: 100%" ></textarea>
+          <br/>
+          <input id="dodajKupca" type="button" value="Dodaj kupca"  onclick="dodajKupcaa()"/>
+      </form>
+      <label id="filtriraj" for="filtiranje">Filtriraj podatke po imenu</label>
+      <input id="filtiranje" placeholder="upisi dio imena"/>
+      <table id="tabelaID" border="1px" style="width: 100%">
+        <thead>
+            <tr>
+                <th>Id Kupca</th>
+                <th>Datum</th>
+                <th>Ime</th>
+                <th>Adresa</th>
+                <th>Poštanski broj</th>
+                <th>Telefon</th>
+                <th>Napomena</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+          </tbody>
+    </table>
+  </div>
+  
+  <div id="footer">
+    <p>Copyright by FIT</p>
+  </div>
+</div>
+</body>
+</html>
