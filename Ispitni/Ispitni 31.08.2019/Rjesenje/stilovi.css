@@ -1,0 +1,140 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: "Courier New", Courier, monospace;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+#glavni {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#lijevo {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+form input,
+textarea {
+  display: block;
+  width: 100%;
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid blue;
+  color: white;
+}
+#naruci {
+  height: 30px;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+.tableispod {
+  padding: 10px;
+  margin-top: 5px;
+}
+#filtiranje1 {
+  background-color: black;
+  border: none;
+  color: white;
+}
+#desno {
+  width: 50%;
+  height: 100%;
+}
+#gornji {
+  height: 50%;
+  background-image: url("/img/slika.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+nav {
+  width: 30%;
+  background-color: rgba(0, 0, 255, 0.288);
+  height: 100%;
+  color: grey;
+  font-size: x-large;
+  text-align: center;
+}
+.IzbornikStavka {
+  width: 50%;
+  display: block;
+  color: grey;
+  margin-top: 10px;
+  text-align: left;
+  position: relative;
+  left: 10%;
+  text-decoration: none;
+}
+.IzbornikStavka:hover {
+  background-color: rgba(0, 0, 255, 0.26);
+}
+#IzbornikDugme {
+  font-size: larger;
+}
+#filtiranje2 {
+  background-color: white;
+  border: none;
+  color: black;
+  margin-top: 8px;
+}
+.donji {
+  height: 50%;
+  padding: 5px;
+  overflow-x: hidden;
+}
+table {
+  font-size: small;
+}
+.footer {
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  
+    #glavni {
+    flex-direction: column-reverse;
+    overflow-y:hidden;
+    overflow-x: hidden;
+  }
+  #desno {
+    width: 100%;
+    height: 50%;
+  }
+  nav{
+      width: 100%;
+      text-align: left;
+  }
+  .IzbornikStavka{
+      display: inline;
+  }
+  #lijevo{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    bottom: 25%;
+  }
+  .donji {
+      width: 100%;
+      position: relative;
+      top: 100%;
+      overflow-x: hidden;
+  }
+  
+  th,
+  tr {
+    width: 10px;
+  }
+}
+.error {
+  color: red;
+}
