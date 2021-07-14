@@ -126,6 +126,7 @@ dodajKupcaa=()=>{
     let url="o	http://onlineshop.wrd.app.fit.ba/api/ispit20190622/Narudzba/Dodaj";
     fetch(url,{method:'POST',headers:{'Content-Type': 'application/json'},body:SendNarudzba}).then(
         response=>{
+            //Serveri ne rade kako treba tako da treba se maci 'no-cors' i onda kada ih otkljucaju raditi ce i ova funkcija;
             if(response.status!==200){
                 alert("Doslo je do greske na servisu: " + response.status);
                 return; 
