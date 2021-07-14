@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  text-size-adjust: 100%;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+h3 {
+  padding: 8px 16px;
+  font-size: 24px;
+}
+
+.IzbornikStavka {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 64px;
+  font-weight: 500;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 48px;
+  color: #f44336;
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  width: 40px;
+  background-color: red;
+  border: 5px solid red;
+  border-radius: 4px;
+  margin-left: 0;
+}
+
+#glavniKontejner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+nav {
+  background-color: red;
+  height: 100%;
+  width: 20%;
+  font-size: larger;
+  padding: 10px;
+  color: white;
+  position: fixed;
+}
+span{
+  font-size: x-large;
+}
+.IzbornikStavka{
+  text-decoration: none;
+  font-size: larger;
+  margin-top: 5px;
+}
+.IzbornikStavka:hover{
+  background-color: rgba(255, 255, 255, 0.514);
+}
+#IzbornikDugme{
+  cursor: pointer;
+  font-size: larger;
+  display: none;
+}
+#wrapper{
+  width: 80%;
+  margin-top: 10%;
+  margin-right: 2%;
+  margin-left: 2%;
+  position: relative;
+  left: 20%;
+}
+img{
+  width: 80%;
+ border: 1px solid black;
+}
+#teamKontejner{
+  display: flex;
+  justify-content: space-between;
+}
+.text{
+  background-color: rgb(199, 196, 196);
+  width: 80%;
+  text-align: center;
+  padding: 5px;
+}
+.Kontejner{
+  padding: 5px;
+  width: 90%;
+}
+form input ,textarea{
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 3px;
+}
+.BtnSend{
+  width: 100%;
+  height: 40px;
+  margin-top: 3px;
+  background-color: red;
+  color: white;
+  font-size: large;
+}
+#footer{
+  margin: 5px;
+}
+@media only screen  and (max-width: 600px) {
+  #glavniKontejner{
+    flex-direction: column;
+  }
+  nav{
+    position: static;
+    width: 100%;
+  }
+
+  .radnik {
+    width: 48%;
+    margin-top: 5px;
+  }
+
+  .text {
+    min-width: 100%;
+  }
+
+  #IzbornikDugme{
+    display: inline;
+    padding: 5px;
+  }
+  #Izbornik{
+    display: none;
+  }
+  .IzbornikStavka{
+    text-align: center;
+  }
+  #wrapper{
+    width: 100%;
+    margin: 0px;
+    position: static;
+  }
+  .Kontejner{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  img{
+    width: 100%;
+  }
+  .text{
+    width: 100%;
+  }
+  #teamKontejner{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.error{
+  color: red;
+}
