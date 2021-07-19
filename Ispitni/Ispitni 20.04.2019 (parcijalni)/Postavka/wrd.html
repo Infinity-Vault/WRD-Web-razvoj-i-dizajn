@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./wrd_files/stilovi.css">
+  <title>WRD ispit</title>
+
+</head>
+<body> 
+
+<nav>
+  <div style="text-align: left;font-size:30px;margin: 20px;">
+      <a id="IzbornikDugme">☰</a><span>BROJ INDEXA</span>
+  </div>
+
+   <div id="Izbornik" style="clear:both">
+  <a class="IzbornikStavka" href="#">Home</a> 
+  <a class="IzbornikStavka" href="#">AMF 1</a> 
+  <a class="IzbornikStavka" href="#">AMF 2</a> 
+  <a class="IzbornikStavka" href="#">AMF 3</a> 
+  <a class="IzbornikStavka" href="#">AMF 4</a> 
+  <a class="IzbornikStavka" href="#">AMF 5</a>
+</div>
+</nav>
+
+
+<div id="wrapper">
+
+  <div>
+    <h1>Iznajmljivanje nekretnine</h1>
+    <hr />
+  </div>
+  <label>Odaberite vilu</label>
+  <div  class="Kontejner">
+        <div class="VilaKolonaWrapper">
+          <img class="VilaKolonaOkvir" src="./wrd_files/team2.jpg" />
+          <h3>Villa Mostar</h3>
+          <h4>100 KM po danu</h4>
+          <p class="VilaOpis">Villa u odlicnom stanju. Na klizistu, nije puno presla. Uskoro u centru Mostara</p>
+        </div>
+       
+        <div class="VilaKolonaWrapper">
+            <img class="VilaKolonaOkvir" src="./wrd_files/team1.jpg"  />
+            <h3>Villa Buna - Blagaj</h3>
+            <h4>120 KM po danu</h4>
+            <p class="VilaOpis">Odlicna za inznajmljivanje turistima i odlicnim studentima.</p>
+        </div>
+
+        <div class="VilaKolonaWrapper">
+            <img class="VilaKolonaOkvir" src="./wrd_files/team3.jpg"  />
+            <h3>Villa Vlašić</h3>
+            <h4>130 KM po danu</h4>
+            <p class="VilaOpis">Buduće kancelarije FIT-a. Iskreno se nadamo.</p>
+        </div>
+      </div>
+        <div  class="Kontejner">
+    <form action="https://wrdforminfo.azurewebsites.net/" target="_blank">
+      <div><label>Slika</label><input id="Slika" name="Slika" readonly placeholder="Kliknite na sliku"  type="text" /></div>
+
+      <div class="" >
+        <div class="KolonaTextbox">
+            <label>Unesite broj dana</label> <input name="BrojDana" id="BrojDana"  type="number" />
+        </div>
+        <div class="KolonaTextbox">
+            <label>Cijena po danu</label> <input name="CijenaPoDanu" readonly style="background-color: lightgrey"  type="number" />
+        </div>
+        <div class="KolonaTextbox">
+           <label style="cursor: pointer;color: blue;background-color:white;border:0;">Izračunaj ukupno</label> <input name="IznosUkupno" readonly style="background-color: lightgrey"  type="text" type="number" />
+        </div>
+      </div>
+      
+      <div><label>Name</label> <input name="Name" requi1c5fc3="" type="text" /></div>
+      <div><label>Email</label> <input name="Email" requi1c5fc3="" type="text" /></div>
+     
+      <button class="BtnSend" type="submit">Send Message</button>
+    </form>
+  </div>
+
+<div>
+  <p>Copyright by FIT</p>
+</div>
+
+<script src="./wrd_files/script.js"></script>
+</body>
+</html>
+

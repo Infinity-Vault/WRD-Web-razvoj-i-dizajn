@@ -1,0 +1,158 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+#wrapper-main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+nav{
+    background-color: blue;
+    color: white;
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    padding: 5px;
+}
+#IzbornikDugme{
+    display: none;
+}
+span{
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+.IzbornikStavka{
+    color: white;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: xx-large;
+    position: relative;
+    left: 5%;
+    width: 30%;
+}
+.IzbornikStavka:hover{
+    background-color: rgba(255, 255, 255, 0.397);
+    color: blue;
+}
+hr{
+   width: 5%;
+   position: relative;
+   right: 47%;
+}
+#wrapper{
+    width: 70%;
+    position: relative;
+    left: 30%;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+.Kontejner{
+    display: flex;
+    margin: 20px;
+}
+.VilaKolonaWrapper{
+    width: 90%;
+    text-align: center;
+}
+img{
+    width: 70%;
+}
+img:hover{
+    opacity: 70%;
+}
+.Kontejner-forma{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 15px;
+}
+form{
+   width: 100%;
+}
+form input{
+    display: block;
+    width: 100%;
+   margin-top: 10px;
+   height: 40px;
+   color: black;
+}
+.BtnSend{
+    width: 101%;
+    padding: 0px;
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    height: 40px;
+}
+.KolonaTextbox{
+    width: 33.3%;
+    float: left;
+}
+#footer{
+    position: relative;
+    margin:15px;
+    padding: 5px;
+}
+@media only screen and (max-width:600px){
+   body{
+       overflow-y: scroll
+   };
+    #wrapper-main{
+        flex-direction: column;
+    }
+    nav{
+        display: static;
+        width: 100%;
+        height: 10%;
+        text-align: center;
+        z-index: 1;
+        padding: 0px;
+    }
+    span{
+        font-size: larger;
+    }
+    #show{
+        display: none;
+    }
+    #IzbornikDugme{
+        display: inline;
+        cursor: pointer;
+        padding: 3px;
+    }
+    .IzbornikStavka{
+        margin: 0px;
+        margin-top: 5px;
+        display: block;
+        font-size: x-large;
+        padding-left: 5px;
+        width: 90%;
+        border: none;
+        border-bottom: 1px solid white;
+    }
+    #Izbornik{
+        display: none;
+    }
+    #wrapper{
+        height: 60%;
+        position: relative;
+        left: 0%;
+        top: 10%;
+        z-index: 0;
+        width: 100%;
+    }
+    .Kontejner{
+        flex-direction: column;
+        align-items: center;
+    }
+}
