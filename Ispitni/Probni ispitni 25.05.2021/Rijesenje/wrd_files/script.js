@@ -135,3 +135,37 @@ function najjeftinijiProizvod(obj)
     return alert("Najjeftiniji proizvod: " + obj[index].naziv + " " + obj[index].cijenaPoKvadratu);
 
 }
+document.getElementById("submitButton").onclick = function() {
+
+    var ID = prompt("Unesite ID proizvoda koji zelite: ");
+
+    order = {
+        dostavaOpstinaID: $("#Grad").val(),
+        dostavaAdresa: $("#Adresa").val(),
+        dostavaIme: $("#Ime").val(),
+        dostavaTelefon: $("#Telefon").val(),
+        stavke: [{
+            proizvodID: ID
+        }]
+    }
+    let adresa="http://onlineshop.wrd.app.fit.ba/api/v2/Narudzba/Dodaj";
+
+
+    fetch(adresa, {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json', 
+        },
+        body: JSON.stringify(order),
+    })
+        .then((r) => {
+            if (r.status != 200) {
+                alert("Server javlja gresku: " + r.statusText);
+                return;
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+}
