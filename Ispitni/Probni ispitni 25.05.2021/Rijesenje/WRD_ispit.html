@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>WRD Ispit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="wrd_files/stilovi.css">
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-validation-1.16.0/dist/jquery.validate.js"></script>
+</head>
+<body>
+
+<div class="sve">
+  <div class="tamni">
+    <div class="unutrasnji">
+      <form class="zaFormu">
+              <label for="Ime">Ime i prezime</label>
+              <input id="Ime" name="Ime" style="color: white" placeholder="ime"/>
+              <br/>
+              <label for="Adresa">Adresa</label>
+              <input id="Adresa" name="Adresa" placeholder="adresa"/>
+              
+              <label for="Grad">Grad</label>
+              <input id="Grad" name="Grad" placeholder="grad"/>
+                      
+              <label for="Telefon">Telefon</label>
+              <input id="Telefon" name="Telefon" placeholder="+387-61-222-2222"/>
+              <br/>
+              <label for="BR_Indexa">Broj indexa</label>
+              <input id="BR_Indexa" name="brIndexa" placeholder="BR_Indexa"/>
+      
+              <br/>
+              <input type="submit" value="Prijavi se" onclick="" />
+      </form>
+    </div>
+  </div>
+  <div class="svijetli">
+      <div class="svijetliGornji"> 
+            <nav>
+              <div style="text-align: left;font-size:25;margin: 5;">
+                  <a id="IzbornikDugme">☰</a><span>BROJ INDEXA</span>
+              </div>
+            
+              <div id="Izbornik" >
+              <input type="button" class="IzbornikStavka" value="Proizvodi" onclick="posaljiProizvode(ucitajProizvode)"/> 
+              <input type="button" class="IzbornikStavka" value="NajLike" onclick="posaljiProizvode(NajLike)"/> 
+              <input type="button" class="IzbornikStavka" value="Budget save" onclick="posaljiProizvode(najjeftinijiProizvod)"/> 
+            </div>
+            </nav>
+      </div>
+      <div class="svijetliDonji" >
+              <table id="tabelaProizvodi" style="width:100%; table-layout : fixed; font-size:20;" >
+                <thead>
+
+                  <tr>
+                      <th>ID</th>
+                      <th>Naziv</th>
+                      <th>Cijena</th>
+                      <th>Slika</th>
+                      <th>Broj like</th>
+                    </tr>
+                </thead> 
+                <tbody>
+
+                </tbody>
+                  </table>
+        <p style="color: springgreen;" >FIT Mostar<br>IBXXXXXX</p>
+      </div>
+  </div>
+</div>
+
+
+</body>
+<script src="wrd_files/script.js"></script>
+</html>

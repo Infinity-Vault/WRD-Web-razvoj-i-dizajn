@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>WRD Ispit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+*{
+box-sizing:border-box;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.sve{
+display:block;
+position: absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+}
+
+.tamni{
+background-color:black;
+opacity: 0.7;
+}
+
+.svijetliGornji{
+background-color:white;
+opacity: 0.8;
+}
+
+table, thead,tbody,tr, th{
+    border: 0px;
+    width: 100%;
+}
+
+tr,th{
+  border-bottom:3px blue solid;
+}
+
+ nav{
+    opacity: 0.5;
+}
+input, textarea{
+      display: block;
+      width: 100%;
+      color: white ;
+      font-size: 16px;
+      background-color: black;
+      margin-bottom: 2px;
+      border: 0px;
+      border-bottom:2px solid blue;
+      opacity: 0.9;
+}
+@media screen and (max-width: 800px) {
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sve">
+  <div class="tamni">
+    <div class="unutrasnji">
+      <form class="zaFormu">
+              <label for="Ime">Ime i prezime</label>
+              <input id="Ime" style="color: white" placeholder="ime"/>
+      
+              <label for="Adresa">Adresa</label>
+              <input id="Adresa" placeholder="adresa"/>
+              
+              <label for="Grad">Grad</label>
+              <input id="Grad" placeholder="grad"/>
+                      
+              <label for="Telefon">Telefon</label>
+              <input id="Telefon" placeholder="+387-61-222-2222"/>
+      
+              <label for="BR_Indexa">Broj indexa</label>
+              <input id="BR_Indexa" placeholder="BR_Indexa"/>
+      
+              <br/>
+              <input type="button" value="Prijavi se" onclick="" />
+      </form>
+    </div>
+  </div>
+  <div class="svijetli">
+      <div class="svijetliGornji"> 
+            <nav>
+              <div style="text-align: left;font-size:25;margin: 5;">
+                  <a id="IzbornikDugme">☰</a><span>BROJ INDEXA</span>
+              </div>
+            
+              <div id="Izbornik" >
+              <input type="button" class="IzbornikStavka" value="Proizvodi" onclick="podaci()"/> 
+              <input type="button" class="IzbornikStavka" value="NajLike" onclick=""/> 
+              <input type="button" class="IzbornikStavka" value="Budget save" onclick=""/> 
+            </div>
+            </nav>
+      </div>
+      <div class="svijetliDonji" >
+              <table id="tabelaProizvodi" style="width:100%; table-layout : fixed; font-size:20;" border="1px">
+                  <tr>
+                    <th>ID</th>
+                    <th>Naziv</th>
+                    <th>Cijena</th>
+                    <th>Slika</th>
+                    <th>Broj like</th>
+                  </tr>
+                  </table>
+        <p style="color: springgreen;">FIT Mostar<br>IBXXXXXX</p>
+      </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
