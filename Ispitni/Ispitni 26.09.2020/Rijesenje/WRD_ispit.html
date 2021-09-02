@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>WRD Ispit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/Rijesenje/wrd_files/stilovi.css">
+<script src="/Rijesenje/external/jquery/jquery.js"></script>
+<script src="/Rijesenje/jquery-validation-1.16.0/dist/jquery.validate.js"></script>
+</head>
+<body>
+
+<div class="sve">
+    <div class="gornji"> 
+         
+     </div>
+  <div class="lijevi">
+    <div class="unutrasnji">
+      <form class="zaFormu">
+              <label for="Ime">Ime i prezime</label>
+              <input id="Ime" name="Ime" style="color: white" placeholder="ime"/>
+              <br/>
+              <label for="Adresa">Adresa</label>
+              <input id="Adresa" name="Adresa" placeholder="adresa"/>
+              <br/>
+              <label for="Grad">Grad</label>
+              <input id="Grad" name="Grad" placeholder="grad"/>
+              <br/>      
+              <label for="LicniBrojKupca">Licni Broj Kupca</label>
+              <input id="LicniBrojKupca" name="Id" placeholder="ID/111-222-ABC"/>
+              <br/>
+              <label for="upit">Upit</label>
+              <textarea type="text" rows="5" style="height:20%;" id="upit" placeholder="upit"></textarea>
+      
+              <br/>
+              <input id="posalji" id="mojeDugme" name="Upit"  type="submit" value="Posalji" onclick="" />
+      </form>
+    </div>
+  </div>
+  <div class="srednji">
+
+      <div class="srednjiSadrzaj" >
+              <table id="tabelaProizvodi" style="width:100%; table-layout : fixed; font-size:20;">
+                <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Naziv</th>
+                      <th>Cijena</th>
+                      <th>Slika</th>
+                      <th>Broj like</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+
+                  </table>
+        <p style="color: whitesmoke;">FIT Mostar<br>IBXXXXXX</p>
+      </div>
+  </div>
+  <div class="desni">
+    <nav>
+      <div style="text-align: left;font-size:25;margin: 5;">
+          <a id="IzbornikDugme">☰</a><span>BROJ INDEXA</span>
+      </div>
+    
+      <div id="Izbornik" >
+      <input type="button" class="IzbornikStavka" value="Proizvodi" onclick="ucitajPodatke(ucitajProizvode)"/> 
+      <input type="button" class="IzbornikStavka" value="Najskuplji" onclick="ucitajPodatke(najvisaCijena)"/> 
+      <input type="button" class="IzbornikStavka" value="Srednja cijena" onclick="ucitajPodatke(srednjaCijena)"/> 
+    </div>
+    </nav>
+  </div>
+  <div class="donji">
+   
+  </div>
+</div>
+
+
+</body>
+<script src="/Rijesenje/wrd_files/script.js"></script>
+</html>

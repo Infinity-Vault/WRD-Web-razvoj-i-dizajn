@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>ovo je neka probna stranica</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+box-sizing:border-box;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.sve{
+
+background-color: darkgrey;
+}
+.lijevi, .desni{
+
+background-color:grey;
+
+}
+.desni{
+ 
+ background-color: rgb(92, 92, 92);
+ 
+}
+
+.gornji, .donji{
+
+background-color:darkgrey;
+
+}
+
+@media screen and (max-width: 800px) {
+    
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<div class="sve">
+    <div class="gornji"> 
+            
+      </div>
+  <div class="lijevi">
+    <div class="unutrasnji">
+      <form class="zaFormu">
+              <label for="Ime">Ime i prezime</label>
+              <input id="Ime" style="color: white" placeholder="ime"/>
+      
+              <label for="Adresa">Adresa</label>
+              <input id="Adresa" placeholder="adresa"/>
+              
+              <label for="Grad">Grad</label>
+              <input id="Grad" placeholder="grad"/>
+                      
+              <label for="LicniBrojKupca">Licni Broj Kupca</label>
+              <input id="LicniBrojKupca" placeholder="ID/111-222-ABC"/>
+      
+              <label for="upit">Upit</label>
+              <textarea type="text" rows="5" style="height:20%;" id="upit" placeholder="upit"></textarea>
+      
+              <br/>
+              <input type="button" value="Posalji" onclick="" />
+      </form>
+    </div>
+  </div>
+  <div class="srednji">
+
+      <div class="srednjiSadrzaj" >
+              <table id="tabelaProizvodi" style="width:100%; table-layout : fixed; font-size:20;" border="1px">
+                  <tr>
+                    <th>ID</th>
+                    <th>Naziv</th>
+                    <th>Cijena</th>
+                    <th>Slika</th>
+                    <th>Broj like</th>
+                  </tr>
+                  </table>
+        <p style="color: whitesmoke;">FIT Mostar<br>IBXXXXXX</p>
+      </div>
+  </div>
+  <div class="desni">
+    <nav>
+      <div style="text-align: left;font-size:25;margin: 5;">
+          <a id="IzbornikDugme">☰</a><span>BROJ INDEXA</span>
+      </div>
+    
+      <div id="Izbornik" >
+      <input type="button" class="IzbornikStavka" value="Proizvodi" onclick="podaci()"/> 
+      <input type="button" class="IzbornikStavka" value="Najskuplji" onclick=""/> 
+      <input type="button" class="IzbornikStavka" value="Srednja cijena" onclick=""/> 
+    </div>
+    </nav>
+  </div>
+  <div class="donji">
+
+  </div>
+</div>
+
+
+</body>
+
+</html>
