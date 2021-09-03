@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/slika.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#providnoNav
+{
+    width: 20%;
+    background-color: rgba(76, 85, 128, 0.555);
+    color: white;
+    
+}
+#Izbornik
+{
+    margin-left: 8%;
+}
+a.IzbornikStavka
+{
+    color: white;
+   
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+.error
+{
+    color: red;
+}
+a.IzbornikStavka:hover
+{
+    background-color: blue;
+    width: 50%;
+}
+
+#wrapper
+{
+    width: 60%;
+  overflow-y: scroll;
+      background-color: rgba(193, 194, 199, 0.479);
+}
+#proizvodi
+{
+    width: 100%;
+    text-align: center;
+}
+#forma
+{
+    width: 100%;
+}
+img
+{
+    width: 10%;
+}
+button
+{
+    background-color:rgba(0, 0, 0, 0.719);
+    border-bottom: 3px solid blue;
+    color: white;
+}
+label
+{
+    float: left;
+    width: 30%;
+}
+input,#opcija
+{
+    width: 70%;
+    background-color:rgba(0, 0, 0, 0.719);
+    border: none;
+    border-bottom: 3px solid blue;
+}
+input
+{
+    color: white;
+}
+#naruci
+{
+    width: 100%;
+}
+
+#narudzbe
+{
+    width: 100%;
+    text-align: center;
+   
+   
+}
+@media only screen and (max-width: 600px) 
+{
+    html,body
+    {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    #providnoNav
+    {
+        width: 100%;
+        height: 20%;
+        
+    }
+    #Izbornik
+    {
+        text-align: center;
+    }
+    a.IzbornikStavka
+    {
+        display: inline;
+      
+       
+    }
+    a.IzbornikStavka:hover
+    {
+        background-color: blue;
+    }
+
+    #wrapper
+    {
+        width: 100%;
+        height: 80%;
+    }
+
+}
