@@ -27,7 +27,7 @@
 }
 img
 {
-    width: 70%;
+    width: 90%;
 }
 .zaFormu
 {
@@ -61,14 +61,18 @@ img
    background-color: rgb(128, 128, 128);
    border-top-right-radius: 60px;
    border-bottom-right-radius: 60px;
+   overflow-y: scroll;
   
 }
+
+
 .srednjiSadrzaj
 {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    overflow-y: scroll;
+   
+  
 }
 #tabelaProizvodi
 {
@@ -76,6 +80,7 @@ img
     border: none;
     color: white;
     text-align: center;
+    
     
 }
 td
@@ -111,6 +116,7 @@ nav
     border: none;
     border-bottom: 2px solid blue;
     border-bottom-right-radius: 10px;
+    cursor: pointer;
 }
 #Izbornik input:hover
 {

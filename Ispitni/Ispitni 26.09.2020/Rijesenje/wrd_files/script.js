@@ -27,7 +27,7 @@ $(".zaFormu").validate({
        Id:
        {
            required:true,
-           regex: /^ID[/]\d{3}-\d{3}-[A-Z]{3}$/
+           regex:/^ID[/]\d{3}-\d{3}-[A-Z]{3}$/
        } 
 
     },
@@ -56,100 +56,106 @@ $(".zaFormu").validate({
 
     }
 });
-function napraviRedove(obj)
+var sviProizvodi;
+napraviRedove=(podaci)=>
 {
-    return `
+    return`
     <tr>
-    <td>${obj.proizvodID}</td>
-    <td>${obj.naziv}</td>
-    <td>${obj.cijenaPoKvadratu}</td>
-    <td><img src="${obj.slikaUrl}"></td>
-    <td>${obj.likeCounter}</td>
-    </tr>`
+    <th>ID</th>
+    <th>Naziv</th>
+    <th>Cijena</th>
+    <th>Slika</th>
+    <th>Broj like</th>
+    </tr>
+    `
+   
 }
-function ucitajProizvode(obj)
-{
-    $("#tabelaProizvodi tbody").empty();
-    for(var i in obj)
-    {
-        document.querySelector("#tabelaProizvodi tbody").innerHTML+=napraviRedove(obj[i]);
-    }
-}
-function ucitajPodatke(func)
+ucitajProzore=()=>
 {
     let adresa="http://onlineshop.wrd.app.fit.ba/api/ispit20190914/Narudzba/GetProizvodiAll";
-
-    fetch(adresa).then((r)=>{
-        if(r.status!=200)
+    fetch(adresa).then((response)=>{
+        if(response.status!==200)
         {
-            alert("Doslo je do greske: "+r.status);
+            alert("Doslo je do greske "+response.status);
             return;
         }
-        r.json().then((x)=>{
-            func(x);
-        });
-    }).catch((error)=>{
-        console.log(error);
-    });
-}
-function najvisaCijena(obj)
-{
-    cijena=[];
-    var pozicija=0;
-    for(var i in obj)
-    {
-        cijena+=obj[i].cijenaPoKvadratu;
-    }
-    for(var i in cijena)
-    {
-        if(cijena[pozicija]>cijena[i])
+        else
         {
-            pozicija=i;
+            response.json().then((proizvodi)=>{
+                napraviRedove(proizvodi);
+                sviProizvodi=proizvodi;
+                for(const proizvod of proizvodi)
+                {
+                    var noviRed=
+                    `<tr>
+                    <td>${proizvod.proizvodID}</td>
+                    <td>${proizvod.naziv}</td>
+                    <td>${proizvod.cijenaPoKvadratu}</td>
+                    <td><img src="${proizvod.slikaUrl}"></td>
+                    <td>${proizvod.likeCounter}</td>
+                    </tr>`;
+                    document.getElementById("tabelaProizvodi").innerHTML+=noviRed;
+                }
+            });
+        }
+    }).catch((error)=>{
+        alert("Doslo je do greske: "+error);
+    });
+};
+najskupljiProizvod=()=>
+{
+    var najskuplji=0;
+    let naziv;
+    for(let i=0;i<sviProizvodi.length; i++)
+    {
+        if(najskuplji<sviProizvodi[i].cijenaPoKvadratu)
+        {
+            najskuplji=sviProizvodi[i].cijenaPoKvadratu;
+            naziv=sviProizvodi[i].naziv;
         }
     }
-    alert("Najskuplji proizvod: "+obj[pozicija].naziv+" "+obj[pozicija].cijenaPoKvadratu);
-
+    alert("Naziv proizvoda: "+naziv+" cijena je "+najskuplji);
 }
-function srednjaCijena(obj)
+srednjaCijena=()=>
 {
-    var prosjek=0;
-    var brojac=0;
-    for(var i in obj)
+    var prosjekCijena=0;
+    let naziv;
+    for(var i=0; i<sviProizvodi.length; i++)
     {
-        prosjek+=obj[i].cijenaPoKvadratu;
-        brojac++;
+        prosjekCijena+=sviProizvodi[i].cijenaPoKvadratu;
     }
-    prosjek/=brojac;
-
-    alert("Prosjek cijena: "+prosjek);
+    if(sviProizvodi.length>0)
+    {
+        prosjekCijena=prosjekCijena/sviProizvodi.length;
+    }
+    alert("Prosjecna cijena svih proizvoda iznosi: "+prosjekCijena+" KM");
 }
-
-document.getElementById("mojeDugme").onclick = function() {
-
-    const order={
+$("#posalji").on("click",function(){
+    
+    var saljiPoruku={
         Ime:$("#Ime").val(),
         Adresa:$("#Adresa").val(),
         Grad:$("#Grad").val(),
-        Id:$("#Id").val(),
-        Upit:$("#Upit").val(),
+        LicniBrojKupca:$("#LicniBrojKupca").val(),
     }
-    let adresa="http://onlineshop.wrd.app.fit.ba/api/Ispit20210601/Add";
+    let adresa="https://onlineshop.wrd.app.fit.ba/s/api/ispit20190622/Narudzba/Dodaj";
     fetch(adresa,{
         method:'POST',
-        mode:'cors',
-        headers:{
-            cors:'cors',
+        headers:
+        {
             'Content-Type': 'application/json', 
         },
-        body:JSON.stringify(order),
-    }).then((r)=>{
-        if(r.status!=200)
+        body:JSON.stringify(saljiPoruku)
+    }).then((response)=>{
+        if(response.status!==200)
         {
-            alert("Server javlja gresku: "+r.statusText)
+            alert("Server javlja gresku "+ response.statusText);
             return;
         }
-    }).catch((error)=>
-    {
-       console.error('Error:',error);
+        response.json().then(x=>{
+            popuniPodatke(x);
+        });
+    }).catch((error)=>{
+        console.error('Error',error);
     });
-}
+})
