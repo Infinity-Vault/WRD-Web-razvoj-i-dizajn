@@ -6,6 +6,7 @@
 <script src="external/jquery/jquery.js"></script>
 <script src="jquery-validation-1.16.0/dist/jquery.validate.js"></script>
 </head>
+
 <body>
 
 <div class="sve">
@@ -17,52 +18,50 @@
               <br/>
               <label for="Adresa">Adresa</label>
               <input id="Adresa" name="Adresa" placeholder="adresa"/>
-              
+              <br/>
               <label for="Grad">Grad</label>
               <input id="Grad" name="Grad" placeholder="grad"/>
-                      
+              <br/>    
               <label for="Telefon">Telefon</label>
               <input id="Telefon" name="Telefon" placeholder="+387-61-222-2222"/>
               <br/>
               <label for="BR_Indexa">Broj indexa</label>
-              <input id="BR_Indexa" name="brIndexa" placeholder="BR_Indexa"/>
+              <input id="BR_Indexa" name="brojIndexa" placeholder="BR_Indexa"/>
       
               <br/>
-              <input type="submit" id="submitButton" value="Prijavi se" onclick="" />
+              <input id="prijava" type="submit" value="Prijavi se" onclick="" />
       </form>
     </div>
   </div>
   <div class="svijetli">
       <div class="svijetliGornji"> 
             <nav>
-              <div style="text-align: left;font-size:25;margin: 5;">
+              <div style="text-align: left;font-size:25;">
                   <a id="IzbornikDugme">☰</a><span>BROJ INDEXA</span>
               </div>
             
               <div id="Izbornik" >
-              <input type="button" class="IzbornikStavka" value="Proizvodi" onclick="posaljiProizvode(ucitajProizvode)"/> 
-              <input type="button" class="IzbornikStavka" value="NajLike" onclick="posaljiProizvode(NajLike)"/> 
-              <input type="button" class="IzbornikStavka" value="Budget save" onclick="posaljiProizvode(najjeftinijiProizvod)"/> 
+              <input type="button" class="IzbornikStavka" value="Proizvodi" onclick="ucitajSlike()"/> 
+              <input type="button" class="IzbornikStavka" value="NajLike" onclick="najviseLajkova()"/> 
+              <input type="button" class="IzbornikStavka" value="Budget save" onclick="najjeftinijiProizvod()"/> 
             </div>
             </nav>
       </div>
       <div class="svijetliDonji" >
-              <table id="tabelaProizvodi" style="width:100%; table-layout : fixed; font-size:20;" >
-                <thead>
+              <table id="tabelaProizvodi" style="width:100%; ; font-size:20;" >
+               <thead>
 
-                  <tr>
-                      <th>ID</th>
-                      <th>Naziv</th>
-                      <th>Cijena</th>
-                      <th>Slika</th>
-                      <th>Broj like</th>
-                    </tr>
-                </thead> 
-                <tbody>
-
-                </tbody>
+                 <tr>
+                     <th>ID</th>
+                     <th>Naziv</th>
+                     <th>Cijena</th>
+                     <th>Slika</th>
+                     <th>Broj like</th>
+                   </tr>
+               </thead>
+               <tbody></tbody>
                   </table>
-        <p style="color: springgreen;" >FIT Mostar<br>IBXXXXXX</p>
+        <p style="color: springgreen;">FIT Mostar<br>IBXXXXXX</p>
       </div>
   </div>
 </div>

@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.sve
+{
+    display: flex;
+}
+html,body,.sve
+{
+    width: 100%;
+    height: 100%;
+    background-image: url("wrd_files/jezero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.tamni
+{
+    width: 25%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.322);
+    
+}
+.unutrasnji
+{
+    margin: 15px 15px 15px 15px;
+}
+.zaFormu input
+{
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.007);
+    border: none;
+    border-bottom: 1px solid blue;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+.svijetli
+{
+    width: 75%;
+    height: 100%;
+}
+.svijetliGornji
+{
+    height: 50%;
+    background-color: rgba(240, 248, 255, 0.185);
+}
+nav
+{
+    width: 25%;
+    height: 100%;
+    background-color: rgba(128, 161, 214, 0.568);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#prijava
+{
+    cursor: pointer;
+    
+}
+#Izbornik
+{
+    margin: 10px 10px 10px 10px;
+}
+#Izbornik input
+{
+    width: 100%;
+    padding: 10px;
+    margin-top: 2%;
+    background-color: lightslategray;
+    border: none;
+    color: white;
+   cursor: pointer;
+}#Izbornik input:hover
+{
+    background-color: rgba(128, 161, 214, 0.568);
+}
+img
+{
+    width: 50%;
+}
+.svijetliDonji
+{
+    height: 50%;
+    text-align: center;
+    overflow-y: auto;
+   
+}
+#tabelaProizvodi 
+{
+   
+  color:springgreen ;
+  text-align: center;
+  table-layout:fixed
+  
+}
+
+table td
+{
+    border-bottom: 1px solid blue;
+   
+}
+table th
+{
+    border-bottom: 3px solid blue;
+    
+}
+.error
+{
+    color: red;
+}
+@media only screen and (max-width:600px)
+{
+    .sve
+    {
+        flex-direction: column-reverse;
+    }
+    .svijetli
+    {
+        width: 100%;
+    }
+    .svijetliGornji
+    {
+        width: 100%;
+        height: 35%;
+    }
+    nav
+    {
+        width: 100%;
+    }
+    .svijetliDonji
+    {
+        height: 65%;
+    }
+     .tamni
+     {
+       display: none;
+     }
+   
+}
