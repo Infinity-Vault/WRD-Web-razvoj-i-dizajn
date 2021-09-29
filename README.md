@@ -1,5 +1,8 @@
 # WRD-Web-razvoj-i-dizajn
 *Repozitorij za predmet WRD (Web razvoj i dizajn)*
+<br>
+![](https://komarev.com/ghpvc/?username=WRD-Web-razvoj-i-dizajn&label=Broj+posjeta:)
+<br>
 
 
 <hr>
