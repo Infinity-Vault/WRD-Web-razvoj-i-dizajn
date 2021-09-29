@@ -4,9 +4,9 @@
 
 <hr>
 
-*Ovdje mozete naci pomocne linkove  povezane sa predmetom WRD:*
+**Ovdje mozete naci pomocne linkove  povezane sa predmetom WRD:**
 
-*Getting started pack:*
+**Getting started pack:**
 
 Link za download VS code:  [Visual Studio Code]()
 
