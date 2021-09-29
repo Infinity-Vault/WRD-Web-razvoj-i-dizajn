@@ -1,9 +1,12 @@
 # WRD-Web-razvoj-i-dizajn
-Repozitorij za predmet WRD (Web razvoj i dizajn)
+*Repozitorij za predmet WRD (Web razvoj i dizajn)*
 
 
-# Ovdje mozete naci pomocne linkove  povezane sa predmetom WRD:
-## Getting started pack:
+<hr>
+
+*Ovdje mozete naci pomocne linkove  povezane sa predmetom WRD:*
+
+*Getting started pack:*
 
 Link za download VS code:  [Visual Studio Code]()
 
@@ -15,7 +18,9 @@ Link za entry level CSS3: [CSS3 Tutorial](https://www.w3schools.com/css/)
 
 Link za entry level JavaScript: [JavaScript Tutorial](https://www.w3schools.com/js/DEFAULT.asp)
 
-## Korisne ekstenzije za VS code:
+<hr>
+
+**Korisne ekstenzije za VS code:**
 
 1. Live Server (pomaze da Vam je website na kojem trenutno radite uvijek refreshovan automatski): [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
@@ -26,7 +31,4 @@ Link za entry level JavaScript: [JavaScript Tutorial](https://www.w3schools.com/
 4. JavaScript code snippets (brze pisete JS code sa ovime): [JavaScript code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
 
 5. Auto close tag (automatski zatvara sve otvorene HTML tagove):  [Autoclose tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-
-   
-
-## 
+<hr>
