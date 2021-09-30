@@ -38,6 +38,7 @@ Link za entry level JavaScript: [JavaScript Tutorial](https://www.w3schools.com/
 **Ispitni zadaci**
 
 <hr>
+
 [Ispitni 03.07.2021](Ispitni/Ispitni%2003.07.2021/Rjesenje) - [Postavka](Ispitni/Ispitni%2003.07.2021/Postavka)
 
 [Ispitni 14.09.2019](Ispitni/Ispitni%2014.09.2019/Rjesenje) - [Postavka](Ispitni/Ispitni%2014.09.2019/Postavka)
@@ -53,3 +54,4 @@ Link za entry level JavaScript: [JavaScript Tutorial](https://www.w3schools.com/
 [Probni ispitni 25.05.2021](Ispitni/Probni%2025.05.2021/Rjesenje) - [Postavka](Ispitni/Probni%2025.05.2021/Postavka)
 
 <hr>
+
