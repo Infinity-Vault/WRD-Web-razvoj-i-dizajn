@@ -22,6 +22,8 @@ Link za entry level CSS3: [CSS3 Tutorial](https://www.w3schools.com/css/)
 Link za entry level JavaScript: [JavaScript Tutorial](https://www.w3schools.com/js/DEFAULT.asp)
 
 <hr>
+
+
 **Korisne ekstenzije za VS code:**
 
 1. Live Server (pomaze da Vam je website na kojem trenutno radite uvijek refreshovan automatski): [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
